@@ -3,9 +3,8 @@ import { Provider } from "react-redux";
 import { store } from "../app/store";
 import UserList from "./UserList";
 import { server } from "../mocks/server";
-import { beforeAll, afterAll, afterEach, test, expect } from "vitest"; // if using vitest
+import { beforeAll, afterAll, afterEach, test, expect } from "vitest"; 
 
-// Start MSW server for API mocking
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
@@ -17,7 +16,6 @@ test("renders Add User form", async () => {
     </Provider>
   );
 
-  // wait for the element to appear in the DOM
   const addUserHeading = await screen.findByText(/Add User/i, {}, { timeout: 2000 });
   expect(addUserHeading).toBeInTheDocument();
 });

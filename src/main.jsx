@@ -6,7 +6,6 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./app/store";
 import App from "./App";
 
-// Fallback UI while persistor rehydrates
 const LoadingUI = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-800">
     Loading your app...

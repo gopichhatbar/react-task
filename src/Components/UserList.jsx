@@ -26,7 +26,6 @@ export default function UserList() {
     const [deleteUserApi] = useDeleteUserMutation();
     const [updateUserApi] = useUpdateUserMutation();
 
-    // Form state (used for both Add & Edit)
     const [formData, setFormData] = useState({ name: "", email: "" });
     const [editUserId, setEditUserId] = useState(null);
 
